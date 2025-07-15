@@ -1,4 +1,7 @@
 package com.livraria_api.repository;
 
-public class LivroRepository {
+import com.livraria_api.model.Livro;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LivroRepository extends JpaRepository<Livro, Integer> {
 }
