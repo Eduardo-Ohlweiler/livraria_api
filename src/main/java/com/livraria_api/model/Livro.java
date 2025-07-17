@@ -22,6 +22,10 @@ public class Livro {
     @Column(nullable = false)
     private  boolean disponivel;
 
+    public Livro() {
+        this.setDisponivel(true);
+    }
+
     public int getId() {
         return id;
     }

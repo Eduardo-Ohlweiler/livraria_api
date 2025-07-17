@@ -43,4 +43,18 @@ public class AutorService {
 
         return autor.get();
     }
+
+    public Autor update(Integer id, AutorDTO dto){
+        Autor autor = this.getById(id);
+
+        if(dto.getNome() != null)
+            autor.setNome(dto.getNome());
+
+        return this.repository.save(autor);
+    }
+
+    public void delete(Integer id){
+        Autor autor = this.getById(id);
+        this.repository.delete(autor);
+    }
 }
